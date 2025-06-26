@@ -1,7 +1,14 @@
 {
   "name": "hono-better-auth",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "db:generate:migration": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "bun run ./scripts/seed.script.ts",
+    "db:reset": "bun run ./scripts/reset.script.ts",
+    "lint": "bunx eslint . --ext .ts,.tsx",
+    "console": "DATABASE_URL=postgresql://user:password@localhost:5432/todos tsx ./scripts/console.script.ts"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.7.0",

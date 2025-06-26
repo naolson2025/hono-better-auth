@@ -8,7 +8,6 @@ import {
 
 export const todosTable = pgTable('todos', {
   id: uuid().primaryKey().defaultRandom(),
-  userId: uuid().notNull(),
   title: varchar({ length: 500 }).notNull(),
   description: varchar({ length: 1000 }),
   completed: boolean().default(false),
