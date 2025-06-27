@@ -3,7 +3,7 @@ import {
   createTestDb,
   destroyTestDb,
   resetDb,
-  TestDbContext,
+  type TestDbContext,
 } from './setup-test-db';
 
 let ctx: TestDbContext;

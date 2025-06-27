@@ -2,6 +2,7 @@ services:
   postgres:
     image: postgres:17.5
     restart: unless-stopped
+    container_name: hono-todos-postgres
     ports:
       - '5432:5432'
     environment:
