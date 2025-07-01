@@ -8,6 +8,13 @@
       "when": 1750973959304,
       "tag": "0000_curly_boomerang",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1751375111931,
+      "tag": "0001_yielding_zombie",
+      "breakpoints": true
     }
   ]
 }

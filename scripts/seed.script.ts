@@ -4,8 +4,14 @@ import { db, pool } from '../src/db/db';
 
 export const seedDb = async () => {
   await seed(db, schema).refine((funcs) => ({
-    todosTable: {
-      count: 20,
+    user: {
+      columns: {},
+      count: 10,
+      with: {
+        todos: 10,
+      },
+    },
+    todos: {
       columns: {
         title: funcs.valuesFromArray({
           values: [

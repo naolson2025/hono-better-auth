@@ -8,10 +8,12 @@
     "db:seed": "bun run ./scripts/seed.script.ts",
     "db:reset": "bun run ./scripts/reset.script.ts",
     "lint": "bunx eslint . --ext .ts,.tsx",
-    "console": "DATABASE_URL=postgresql://user:password@localhost:5432/todos tsx ./scripts/console.script.ts"
+    "console": "DATABASE_URL=postgresql://user:password@localhost:5432/todos tsx ./scripts/console.script.ts",
+    "open-auth-docs": "open-cli http://localhost:3000/api/auth/reference"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.7.0",
+    "better-auth": "^1.2.12",
     "drizzle-orm": "^0.44.2",
     "drizzle-seed": "^0.3.1",
     "hono": "^4.8.3",
@@ -28,6 +30,7 @@
     "drizzle-kit": "^0.31.1",
     "eslint": "^9.28.0",
     "globals": "^16.2.0",
+    "open-cli": "^8.0.0",
     "tsx": "^4.20.3",
     "typescript-eslint": "^8.34.0"
   }
