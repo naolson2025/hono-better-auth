@@ -1,0 +1,29 @@
+### Sign up with Email
+
+POST http://localhost:3000/api/auth/sign-up/email
+Content-Type: application/json
+
+{
+  "name": "Nick Olson",
+  "email": "test@test.com",
+  "password": "password123"
+}
+
+### Missing Email throws error
+
+POST http://localhost:3000/api/auth/sign-up/email
+Content-Type: application/json
+
+{
+  "name": "Nick Olson",
+  "password": "password123"
+}
+
+### Missing Password throws error
+POST http://localhost:3000/api/auth/sign-up/email
+Content-Type: application/json
+
+{
+  "name": "Nick Olson",
+  "email": "test@test.com"
+}
