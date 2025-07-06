@@ -1,15 +1,27 @@
-// src/lib/auth.ts
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { db } from '../db/db';
 import { openAPI } from 'better-auth/plugins';
+import { sendEmail } from '@/lib/email';
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
-    provider: 'pg', // or "mysql", "sqlite"
+    provider: 'pg',
   }),
   emailAndPassword: {
     enabled: true,
+    requireEmailVerification: true,
   },
   plugins: [openAPI()],
+  emailVerification: {
+    sendOnSignUp: true,
+    sendVerificationEmail: async ({ user, url }) => {
+      await sendEmail({
+        to: user.email,
+        subject: 'Verify Your Email Address',
+        text: `Please click the following link to verify your email address: ${url}`,
+        html: `<p>Please click the following link to verify your email address: <a href="${url}">Verify Email</a></p>`,
+      });
+    },
+  },
 });
