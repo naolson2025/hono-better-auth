@@ -11,11 +11,6 @@ export const authMiddleware = createMiddleware<HonoEnv>(async (c, next) => {
     return c.json({ error: 'Unauthorized' }, 401);
   }
 
-  const user = {
-    ...session.user,
-    image: session.user.image ?? null, // Convert undefined to null
-  };
-
-  c.set('user', user);
+  c.set('user', session.user);
   await next();
 });
