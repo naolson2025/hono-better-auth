@@ -28,14 +28,14 @@ Content-Type: application/json
   "email": "test@test.com"
 }
 
-
 ### Sign in with Email and Password
+# @name login
 POST http://localhost:3000/api/auth/sign-in/email
 Content-Type: application/json
 
 {
   "email": "nickolsoncodes@gmail.com",
-  "password": "newpassword123"
+  "password": "password123"
 }
 
 ### forgot password
@@ -53,4 +53,16 @@ Content-Type: application/json
 {
   "newPassword": "newpassword123",
   "token": "lM6gKNIilAG4CLzac7dPx41o"
+}
+
+### Get todos
+GET http://localhost:3000/api/todos
+
+### Create a new todo
+POST http://localhost:3000/api/todos
+Content-Type: application/json
+
+{
+  "title": "another New Todo",
+  "description": "This is a new todo"
 }

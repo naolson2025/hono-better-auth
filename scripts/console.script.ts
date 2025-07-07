@@ -12,7 +12,7 @@
 import * as repl from 'node:repl';
 import { serve } from '@hono/node-server';
 import app from '../src/index';
-// import * as queries from '../src/db/queries';
+import * as queries from '../src/db/queries';
 import * as db from '../src/db/db';
 
 console.log('🚀 Starting Hono server for console...');
@@ -36,7 +36,7 @@ const replServer = repl.start({
 });
 
 replServer.context.app = app;
-// replServer.context.queries = queries;
+replServer.context.queries = queries;
 replServer.context.db = db;
 
 replServer.on('exit', () => {
