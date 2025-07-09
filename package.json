@@ -1,7 +1,8 @@
 {
   "name": "hono-better-auth",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "db:up": "docker compose up -d"
   },
   "dependencies": {
     "hono": "^4.8.3"
