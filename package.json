@@ -12,7 +12,9 @@
     "better-auth": "^1.2.12",
     "drizzle-orm": "^0.44.2",
     "drizzle-seed": "^0.3.1",
+    "form-data": "^4.0.3",
     "hono": "^4.8.3",
+    "mailgun.js": "^12.0.3",
     "pg": "^8.16.3"
   },
   "devDependencies": {
