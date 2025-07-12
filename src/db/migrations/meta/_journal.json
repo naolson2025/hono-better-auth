@@ -8,6 +8,13 @@
       "when": 1752146598301,
       "tag": "0000_blue_valeria_richards",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1752237406303,
+      "tag": "0001_dark_shard",
+      "breakpoints": true
     }
   ]
 }
